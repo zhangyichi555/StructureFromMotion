@@ -1,0 +1,32 @@
+cmake_minimum_required(VERSION 3.5)
+project(my_repo)
+set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake/" ${CMAKE_MODULE_PATH})
+
+#Eigen(required)
+#find_package(Eigen REQUIRED)
+
+#replenish your Eigen directory here
+include_directories(***********/Eigen)
+
+#include_directories(${EIGEN_INCLUDE_DIRS})
+add_definitions(-DEIGEN_USE_NEW_STDVECTOR -DEIGEN_YES_I_KNOW_SPARSE_MODULE_IS_NOT_STABLE_YET)
+
+set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_FLAGS "-fPIC")
+
+#add_subdirectory(core)
+#add_subdirectory(util)
+#add_subdirectory(features)
+#add_subdirectory(sfm)
+#add_subdirectory(mvs)
+#add_subdirectory(examples)
+#add_subdirectory(surface)
+#add_subdirectory(texturing)
+#add_subdirectory(3rdParty/mrf)
+#add_subdirectory(3rdParty/coldet)
+#add_subdirectory(3rdParty/gco)
+#add_subdirectory(3rdParty/rayint)
+add_subdirectory(3rdParty/Eigen)
+#add_subdirectory(3rdParty/mapmap)
+
+
