@@ -275,7 +275,7 @@ point_sets_pair_vec sample_corr_pairs_to_MaxInliner(double sampson_threshold,
         x2[2] = input_corr_pairs.set_b[i].z;  // = 1.0
         
         //分子
-        double numerator = x2 * input_largest_inliner_funda_mat * x1;
+        double numerator = pow((x2 * input_largest_inliner_funda_mat * x1),2);
         //分母
         double denominator = (
             pow((input_largest_inliner_funda_mat * x1)[0], 2) +
